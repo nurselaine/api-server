@@ -15,6 +15,7 @@ app.get('/', async (req, res, next) => {
 
 app.use(plantRouter);
 
+
 function start() {
   app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
 }
