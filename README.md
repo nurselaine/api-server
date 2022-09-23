@@ -23,9 +23,7 @@
 
 ![UML](UML.png)
 
-WIC - will discuss further in class 9/20
-
 
 ## Links
-- Latest PR on GitHub: https://github.com/nurselaine/basic-express-server/actions
-- Heroku link: https://nurselaine-express-server-prod.herokuapp.com/
+- Latest PR on GitHub: https://github.com/nurselaine/api-server/pull/4
+- Heroku link: https://nurselaine-api-server.herokuapp.com/
