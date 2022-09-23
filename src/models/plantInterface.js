@@ -9,7 +9,7 @@ class PlantInterface {
     // creates a new plant model instance
     console.log(`this is our json ${json}`);
     try {
-      let record = await this.model.create(json);
+      let record = await this.plant.create(json);
       return record;
     } catch (error) {
       console.error('ERROR: ', error);
@@ -22,9 +22,9 @@ class PlantInterface {
     try{
       let record;
       if(id){
-        record = await this.model.findOne({ where: { id }});
+        record = await this.plant.findOne({ where: { id }});
       } else {
-        record = await this.model.findAll();
+        record = await this.plant.findAll();
       }
       return record;
     } catch(error){
@@ -35,7 +35,7 @@ class PlantInterface {
 
   async readManyToOne(id, model){
     try{
-      const response = await this.model.findOne({where: {id}, include: model});
+      const response = await this.plant.findOne({where: {id}, include: model});
       return response;
     } catch (error){
       console.log('ERROR', error);
@@ -46,8 +46,8 @@ class PlantInterface {
   async update(data, id) {
     // updates a model instance in DB
     try{
-      await this.model.update(data, {where: { id }});
-      let record = await this.model.findOne({where: { id }});
+      await this.plant.update(data, {where: { id }});
+      let record = await this.plant.findOne({where: { id }});
       return record;
     } catch(error){
       console.error('ERROR: ', error);
@@ -58,7 +58,7 @@ class PlantInterface {
   async delete(id) {
     // removes a model instance from DB
     try{
-      await this.model.destroy({where: {id}});
+      await this.plant.destroy({where: {id}});
       return 'Record Deleted';
     } catch(error){
       console.error('ERROR: ', error);

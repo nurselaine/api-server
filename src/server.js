@@ -1,11 +1,12 @@
 'use strict';
 
 const express = require('express');
+require('dotenv').config();
 const plantRouter = require('./routes/plants');
+
+const PORT = process.env.PORT || 3002;
 const app = express();
 app.use(express.json());
-require('dotenv').config();
-const PORT = process.env.PORT || 3002;
 
 
 app.get('/', async (req, res, next) => {
@@ -13,6 +14,7 @@ app.get('/', async (req, res, next) => {
 });
 
 app.use(plantRouter);
+
 
 function start() {
   app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
