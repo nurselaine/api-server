@@ -3,6 +3,7 @@
 const express = require('express');
 require('dotenv').config();
 const plantRouter = require('./routes/plants');
+const potRouter = require('./routes/pots');
 
 const PORT = process.env.PORT || 3002;
 const app = express();
@@ -14,7 +15,7 @@ app.get('/', async (req, res, next) => {
 });
 
 app.use(plantRouter);
-
+app.use(potRouter);
 
 function start() {
   app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
