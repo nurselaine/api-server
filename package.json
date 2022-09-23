@@ -1,0 +1,36 @@
+{
+  "dependencies": {
+    "dotenv": "^16.0.2",
+    "eslint": "^8.23.1",
+    "express": "^4.18.1",
+    "jest": "^29.0.3",
+    "nodemon": "^2.0.20",
+    "pg": "^8.8.0",
+    "sequelize": "^6.23.1",
+    "sequelize-cli": "^6.4.1",
+    "sqlite3": "^5.1.1",
+    "supertest": "^6.2.4"
+  },
+  "name": "api-server",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "NODE_ENV=test jest --verbose --coverage",
+    "test-watch": "NODE_ENV=test jest jest --watchAll --verbose --coverage",
+    "db:config": "sequelize init:config",
+    "db:create": "sequelize db:create",
+    "dev": "npx nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nurselaine/api-server.git"
+  },
+  "author": "Elaine Huynh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nurselaine/api-server/issues"
+  },
+  "homepage": "https://github.com/nurselaine/api-server#readme"
+}
