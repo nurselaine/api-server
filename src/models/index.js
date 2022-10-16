@@ -7,7 +7,7 @@ const plantsSchema = require('./plant.schema');
 const potSchema = require('./pot.schema');
 const ModelInterface = require('./ModelInterface');
 
-const DATABASE_URL = process.env.DATABASE_URL;
+const DATABASE_URL = process.env.NODE_ENV === 'test' ? 'sqlite::memory' : process.env.DATABASE_URL;
 
 // const DATABASE_URL = process.env.NODE_ENV === 'test'
 //   ? 'sqlite:memory'
