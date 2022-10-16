@@ -14,10 +14,17 @@
     - Endpoint: /plant (with or without name query)
         - returns array with plant collection data
 
+## Start
+    - to run server npm i express sequelize sequelize-cli
+
+## Routes
+    - /plants   
+        - GET, PUT, POST, DELETE for postgresDB plant table data
+    - /pots
+        - GET,PUT,POST,DELETE for postgresDB pots table data
 
 #### Tests
-    - Unit Tests: npm run test
-    - Lint Tests: npm run lint
+    - Unit Tests: npm run test [filename]
 
 #### UML
 
